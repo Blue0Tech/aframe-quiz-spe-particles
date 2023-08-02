@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-spe-particles-component@^1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+        <script src="./game.js"></script>
+    </head>
+
+    <body>
+        <a-scene id="scene" cursor="rayOrigin: mouse" game>
+            <a-sky color="black"></a-sky>
+            <a-camera position="0 0 10" wasd-controls-enabled="false" look-controls-enabled="false"></a-camera>
+            <a-entity visible="false" id="wrong" spe-particles="color: red; velocity: 0 15 0; velocity-spread: 6 2 6; acceleration: 0 -10 0; duration: -1; frustum-culled: true; max-age: 2; particle-count: 200;" position="-13 -6 0"></a-entity>
+            <a-entity visible="false" id="correct" spe-particles="color: green; velocity: 0 15 0; velocity-spread: 6 2 6; acceleration: 0 -10 0; duration: -1; frustum-culled: true; max-age: 2; particle-count: 200;" position="13 -6 0"></a-entity>
+        </a-scene>
+    </body>
+</html>
